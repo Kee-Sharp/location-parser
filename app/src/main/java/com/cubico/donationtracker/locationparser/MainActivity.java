@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onParse(View view) {
-        Log.d("Log","Parse Clicked");
         Context context = view.getContext();
         List<String> locationData = new ArrayList<>();
         try {
@@ -55,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
         catch (IOException e) {
             e.printStackTrace();
         }
-        Log.d("Log","Lines read");
         List<Location> locations = new ArrayList<>();
         for (String locationElement : locationData) {
             String[] data = locationElement.split(",");
