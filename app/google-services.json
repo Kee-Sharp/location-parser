@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "754080891705",
+    "firebase_url": "https://donation-tracker-53bea.firebaseio.com",
+    "project_id": "donation-tracker-53bea",
+    "storage_bucket": "donation-tracker-53bea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518044420970:android:9f4b2af88fac0190",
+        "android_client_info": {
+          "package_name": "com.cubico.donationtracker.locationparser"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518044420970-unisdlu91dn6n347ntkm16j9itn5omio.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cubico.donationtracker.locationparser",
+            "certificate_hash": "e19a1b66407b1d3f078f858a25eee0a5503b0135"
+          }
+        },
+        {
+          "client_id": "518044420970-prlk3k6188v276cvn4h0ihfsgoojttkh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD__zmEjnY7NC880YnDKSgZA-UmIOYUVAM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "518044420970-prlk3k6188v276cvn4h0ihfsgoojttkh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

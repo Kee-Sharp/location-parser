@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d("Location", location.toString());
         }
 
-//
+        Location.upload(locations);
     }
     public int toInt(String s) {
         return Integer.parseInt(s);

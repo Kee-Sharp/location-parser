@@ -1,5 +1,12 @@
 package com.cubico.donationtracker.locationparser;
 
+import android.util.Log;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.List;
+
 public class Location {
     private int key;
     private String name;
@@ -26,6 +33,18 @@ public class Location {
         this.phone = phone;
         this.website = website;
     }
+
+    public static void upload(List<Location> locations) {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference locationRef = database.getReference().child("Locations");
+        DatabaseReference myRef;
+        for(Location loc: locations) {
+            myRef = database.getReference().child("Locations").child(loc.key + "");
+            myRef.setValue(loc);
+        }
+
+    }
+
     public String toString() {
         return String.format("Welcome to %s, located in %s, %s", name, city, state);
     }
