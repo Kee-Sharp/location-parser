@@ -43,12 +43,9 @@ public class MainActivity extends AppCompatActivity {
             InputStream is = context.getAssets().open("LocationData.csv");
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
             String line;
-            boolean first = true;
+            reader.readLine();
             while ((line = reader.readLine()) != null) {
-                if (!first) {
-                    locationData.add(line);
-                }
-                first = false;
+                locationData.add(line);
             }
         }
         catch (IOException e) {
