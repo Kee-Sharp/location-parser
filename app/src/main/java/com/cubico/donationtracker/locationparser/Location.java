@@ -19,6 +19,7 @@ public class Location {
     private LocationType type;
     private String phone;
     private String website;
+    private static boolean alreadyUploaded = false;
 
     Location(int key, String name, float lat, float longitude, String address, String city, String state, int zip, LocationType type, String phone, String website) {
         this.key = key;
@@ -35,6 +36,9 @@ public class Location {
     }
 
     public static void upload(List<Location> locations) {
+        if (alreadyUploaded) {
+            return;
+        }
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference locationRef = database.getReference().child("Locations");
         DatabaseReference myRef;
@@ -42,7 +46,7 @@ public class Location {
             myRef = database.getReference().child("Locations").child(loc.key + "");
             myRef.setValue(loc);
         }
-
+        alreadyUploaded = true;
     }
 
     public String toString() {
